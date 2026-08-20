@@ -1,13 +1,14 @@
 import express, { Request, Response } from "express";
-import cors from "cors";
 import authRoutes from "./routes/authRoutes";
 import taskRoutes from "./routes/taskRoutes";
 import { setupSwagger } from "./swagger";
 import { config } from "./config";
+import { corsMiddleware } from "./cors";
 
 const app = express();
-app.use(cors());
+app.use(corsMiddleware);
 app.use(express.json());
+
 
 setupSwagger(app);
 
