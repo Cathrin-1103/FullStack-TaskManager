@@ -28,7 +28,6 @@ export const swaggerSpec = {
         type: "object",
         properties: {
           id: { type: "string", example: "1" },
-
           title: { type: "string", example: "Complete task API implementation" },
           done: { type: "boolean", example: false },
         },
